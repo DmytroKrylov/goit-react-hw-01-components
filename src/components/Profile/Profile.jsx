@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 const Profile = props => {
   const { username, tag, location, avatar, stats } = props;
   return (
-    <div className="profile">
+    <section className="profile">
       <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
+        <img src={avatar} alt="User avatar" className="avatar" width="50" />
         <p className="name">{username}</p>
         <p className="tag">{tag}</p>
         <p className="location">{location}</p>
@@ -25,16 +25,16 @@ const Profile = props => {
           <span className="quantity">{stats.likes}</span>
         </li>
       </ul>
-    </div>
+    </section>
   );
 };
 
 Profile.propTypes = {
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  avatar: PropTypes.string,
-  stats: PropTypes.object,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired,
 };
 
 export default Profile;

@@ -4,8 +4,8 @@ const Statistics = props => {
   const { title, stats } = props;
   return (
     <section className="statistics">
-      {/* {title && <h2 className="title">{title}</h2>} */}
-      <h2 className="title">{title}</h2>
+      {title && <h2 className="title">{title}</h2>}
+      {/* <h2 className="title">{title}</h2> */}
       <ul className="stat-list">
         {stats.map(({ id, label, percentage }) => (
           <li key={id} className="item">
