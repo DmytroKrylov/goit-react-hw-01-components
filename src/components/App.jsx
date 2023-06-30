@@ -9,7 +9,7 @@ import transactions from '../data/transactions.json';
 
 const App = () => {
   return (
-    <div>
+    <div style={{ paddingTop: '50px' }}>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -18,7 +18,7 @@ const App = () => {
         stats={user.stats}
       />
       <Statistics title="Upload stats" stats={data} />
-      {/* <Statistics stats={data} /> */}
+      <Statistics stats={data} />
 
       <FriendList friends={friends} />
 

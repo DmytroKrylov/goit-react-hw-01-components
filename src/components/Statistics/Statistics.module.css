@@ -1,0 +1,21 @@
+.section_statistics {
+  margin: 50px auto;
+  width: 400px;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.title {
+  text-align: center;
+  padding: 10px;
+}
+.stat_list {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 10px;
+}
+.stat_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

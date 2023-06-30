@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import css from './FriendList.module.css';
 
 const FriendList = props => {
   const { friends } = props;
   return (
-    <section className="friends">
-      <ul className="friend-list">
+    <section className={css.section_friends}>
+      <ul className={css.friend_list}>
         {friends.map(({ avatar, name, id, isOnline }) => (
           <FriendListItem
             avatar={avatar}
@@ -19,7 +20,7 @@ const FriendList = props => {
 };
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
-  const statusClass = isOnline ? 'status online' : 'status offline';
+  const statusClass = isOnline ? 'Online' : 'Ofline';
 
   return (
     <li className="item">
