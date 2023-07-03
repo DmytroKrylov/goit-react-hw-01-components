@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 import { getRandomColor } from '../../index';
 
-const Statistics = props => {
-  const { title, stats } = props;
+const Statistics = ({ title, stats }) => {
   return (
     <section
       className={css.section_statistics}

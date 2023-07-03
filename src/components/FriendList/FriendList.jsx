@@ -1,8 +1,7 @@
-import PropTypes from 'prop-types';
+import FriendListItem from './FriendListItem';
 import css from './FriendList.module.css';
 
-const FriendList = props => {
-  const { friends } = props;
+const FriendList = ({ friends }) => {
   return (
     <section className={css.section_friends}>
       <ul className={css.friend_list}>
@@ -17,25 +16,6 @@ const FriendList = props => {
       </ul>
     </section>
   );
-};
-
-const FriendListItem = ({ avatar, name, isOnline }) => {
-  const statusClass = isOnline ? 'Online' : 'Ofline';
-
-  return (
-    <li className="item">
-      <span className={statusClass}>{statusClass}</span>
-      <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
-    </li>
-  );
-};
-
-FriendListItem.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
-  id: PropTypes.number,
 };
 
 export default FriendList;
